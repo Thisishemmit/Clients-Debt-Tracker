@@ -15,16 +15,18 @@ import {
   BellAlertIcon,
   ArrowLeftOnRectangleIcon,
 } from "@heroicons/react/24/solid";
-import { useEffect, useState } from "react";
+interface SidebarProps {
+  setSelectedMenu: (menu: string) => void;
+}
 
-export function Sidebar({setSelectedMenu}) {
+export function Sidebar({setSelectedMenu}: SidebarProps) {
   const handleSelection = (menu: string) => {
     setSelectedMenu(menu); // Call the parent component's callback
   };
   return (
     <Card
-      className="h-full w-full bg-heumint-light rounded-none max-w-[17rem] 
-    p-4  shadow-sm"
+      className="h-full w-full rounded-none max-w-[17rem] 
+    p-4  "
     >
       <div className="mb-2 flex items-center gap-4 p-4">
         <img src="src/assets/logo-black.svg" alt="brand" className="h-8 w-8" />

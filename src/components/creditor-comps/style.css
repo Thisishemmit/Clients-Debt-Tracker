@@ -1,0 +1,18 @@
+.ag-theme-alpine {
+  /* disable all borders */
+  --ag-borders: none;
+  /* then add back a border between rows */
+  --ag-row-border-style: dashed;
+  --ag-row-border-width: 3px;
+  --ag-row-border-color: rgb(236, 236, 236);
+}
+
+.ag-details-grid {
+
+  box-shadow: 0px 0px 15px -3px rgba(0,0,0,0.25);
+  border-radius: 7px;
+  overflow: hidden;
+}
+.detail .ag-column-drop-wrapper{
+  width: 90%;
+}

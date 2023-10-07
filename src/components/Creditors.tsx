@@ -3,19 +3,19 @@ import {
   Card,
   CardHeader,
   Typography,
-  Button,
+
 } from "@material-tailwind/react";
 
 
-import DataTable from "./my-reusable-comps/DataTable";
 import { AddCreditorForm } from "./creditor-comps/AddCreditorForm";
-
-
+import CreditorsViewer from "./creditor-comps/Viewer/CreditorsViewer";
+import YourGridComponent from "./creditor-comps/ClientsViewer";
+import GridExample from "./creditor-comps/ClientsViewer";
 function Creditors() {
   
 
   return (
-    <Card className="h-full w-full">
+    <Card className="h-full w-full rounded-none shadow-none" >
       <CardHeader floated={false} shadow={false} className="rounded-none">
         <div className="mb-8 flex items-center justify-between gap-8">
           <div>
@@ -24,15 +24,12 @@ function Creditors() {
             </Typography>
           </div>
           <div className="flex shrink-0 flex-col gap-2 sm:flex-row">
-            <Button variant="outlined" size="sm">
-              view all
-            </Button>
+            
             <AddCreditorForm />
           </div>
         </div>
-      
       </CardHeader>
-      <DataTable />
+      <GridExample />
     </Card>
   );
 }

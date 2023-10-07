@@ -99,7 +99,7 @@ function AddCreditorForm() {
           </DialogHeader>
           <div className="flex flex-col items-center gap-4 content-center py-4">
             <div className="grid grid-cols-1 items-center gap-4">
-              <Input label="Name" icon={<UserIcon />} value={name} onChange={(e): void => { handNameChange(e.target.value) }} error={!nameIsValid} />
+              <Input crossOrigin="" label="Name" icon={<UserIcon />} value={name} onChange={(e): void => { handNameChange(e.target.value) }} error={!nameIsValid} />
               
             </div> 
             <div className="grid grid-cols-1 w-60 items-center gap-4">
@@ -107,7 +107,7 @@ function AddCreditorForm() {
               <div className={`${showPhonePrefix || phone ? "opacity-100" : "opacity-0"} h-6 phonesfix w-12 absolute translate-x-2 translate-y-2  flex items-center justify-center text-xs text-blue-gray-800 font-semibold  rounded-l-lg bg-gray-200`}>
                 {phoneTooLong ? "+" :  "+212"}
               </div>
-              <Input className={showPhonePrefix || phone ? "pl-16" : ""} onBlur={() => { setShowPhonePrefix(false) }} onFocus={() => { setShowPhonePrefix(true) }} color={phoneTooLong ? "amber" : undefined} label="Phone" icon={<PhoneIcon />} value={phone} error={!phoneIsValid}  onChange={(e): void => { handPhoneChange(e.target.value) } }/>
+              <Input crossOrigin="" className={showPhonePrefix || phone ? "pl-16" : ""} onBlur={() => { setShowPhonePrefix(false) }} onFocus={() => { setShowPhonePrefix(true) }} color={phoneTooLong ? "amber" : undefined} label="Phone" icon={<PhoneIcon />} value={phone} error={!phoneIsValid}  onChange={(e): void => { handPhoneChange(e.target.value) } }/>
               </div>
             </div>
              {phoneTooLong ? <ClosableWarn warn={phoneErr} /> : ''}
